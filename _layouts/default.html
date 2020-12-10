@@ -6,6 +6,10 @@
     <title>{{ page.title }}</title>
 </head>
 <body>
-    {{ content }}
+    {% include navegacao.html %}
+    <div class="main">
+        {{ content }}
+    </div>
+    {% include rodape.html %}
 </body>
 </html>
