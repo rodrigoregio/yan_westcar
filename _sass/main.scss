@@ -1,0 +1,56 @@
+*{box-sizing: border-box;}
+body{
+    background-color: black;
+    color:white;
+    margin: 0px;
+    padding: 0px;
+
+}
+button{
+    background-color: #48487F;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.cabecalho{
+    background-color: black;
+    text-align: center;
+}
+.cabecalho_imagem{
+    /*border: 2px solid white;*/
+    padding-top: 3.1em;
+}
+.logo_caption{
+    font-family: 'Lemonada', cursive;
+    font-size: 1.5em;
+}
+.navegacao{
+    width: 100%;
+    display: block;
+    position: fixed;
+    background-color: #333;
+    color: white;
+    text-align: left;
+    overflow: auto;
+    margin: 0;
+    top: 0;
+    font-size: 1.5em;
+    /*padding-top: 0.5em;
+    padding-bottom: 0.5em;*/
+    float: left;
+}
+.navlink{
+    font-family: 'Lemonada', cursive;
+    float:right;
+    color:white;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+.navlink:hover{
+    color: black;
+    background-color: white;
+}
+.principal{
+    
+}

@@ -1,21 +1,84 @@
 ---
 layout: default
 title: Home
+i: 0
 ---
-<main class="corpo">
-    <button>Solicitar cotação</button>
+<main class="principal">
     <figure>
         <img src="/assets/images/fachada.jpg" alt="Fachada da loja"/>
         <figcaption>Fachada da loja</figcaption>
     </figure>
     <hr/>
-    <article class="post">
-        <h1>Atualizações</h1>
+    <article id="post">
+        <h1>{{ "atualizações" | upcase }}</h1>
         <ul>
             {% for post in site.posts %}
             <li>
-                <img src=""
+                <p>postado em {{ post.date | date_to_string }}</p>
+                {{ post.excerpt }}
+                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
             </li>
+            {% endfor %}
         </ul>
+    </article>
+    <hr>
+    <article id="depoimentos">
+        <h1>{{ "depoimentos" | upcase }}</h1>
+            {% for item in site.data.depoimentos %}
+                <p>
+                    {%for i in (0..5) %}
+                        {% if i != item.estrelas %}
+                            <img src="/assets/images/stars.svg" alt="estrelas" class="">
+                        {% else %}
+                            {% break %}
+                        {% endif %}
+                    {% endfor %} - {{item.data}}</p>
+                <p><cite>{{item.comentario}}</cite><br/>-{{ item.nome }}</p>
+            {% endfor %}
+            <a href="https://search.google.com/local/writereview?placeid=ChIJe7xEndEDz5QR1ZFz3DNafOY">Escreva um comentário</a> <a href="https://search.google.com/local/reviews?placeid=ChIJe7xEndEDz5QR1ZFz3DNafOY">Veja mais</a>
+    </article>
+    <article class="">
+        <hr/>
+        <h1>{{ "som, alarme, insulfilm" | upcase }}</h1>
+        <p>Temos diversos modelos de lâmpadas, tanto para uso externo ou interno, de diversos modelos de veículos</p>
+    </article>
+    <article class="">
+        <hr>
+        <h1 class="">{{ "Galeria"| upcase }}</h1>
+        <!-- .galeria-img {
+    width: 140px;
+    height: 140px;
+    object-fit: none;
+} -->
+        {% for i in (1..11) %}
+            <img src="/assets/images/foto{{ i }}.PNG" alt="" class="galeria-img">
+        {% endfor %}
+    </article>
+    <article>
+        <hr>
+        <h1>{{ "entrar em contato" | upcase }}</h1>
+        <a href="https://www.google.com/maps/place/WestCar/data=!3m1!4b1!4m2!3m1!1s0x94cf03d19d44bc7b:0xe67c5a33dc7391d5"><img src="/assets/images/map.PNG" alt="Mapa" class=""></a>
+        <div class="">
+            <h1>Contato</h1>
+            <button class="">Ligar agora</button>
+            <p>(11) 96128-3704</p>
+        </div>
+        <div class="">
+            <h1>Endereço</h1>
+            <button>Ver rotas</button>
+            <p>Avenida Moacir da Silveira, 1774<br>Jardim Isaura<br>Santana de Parnaíba - SP<br>06516-050<br>Brasil</p>
+        </div>
+        <div class="">
+            <h1>Horário de funcionamento</h1>
+            <p>
+                seg.: 09:00 - 18:00 <br>
+                ter.: 09:00 - 18:00 <br>
+                qua.: 09:00 - 18:00 <br>
+                qui.: 09:00 - 18:00 <br>
+                sex.: 09:00 - 18:00 <br>
+                sáb.: 09:00 - 12:00 <br>
+                dom.: {{ "Fechado" | upcase }}
+            </p>
+        </div>
     </article>
 </main>
