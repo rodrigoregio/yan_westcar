@@ -4,7 +4,7 @@ body{
     color:white;
     margin: 0px;
     padding: 0px;
-
+    font-family: 'Lemonada', cursive;
 }
 button{
     background-color: #48487F;
@@ -21,8 +21,8 @@ button{
     padding-top: 3.1em;
 }
 .logo_caption{
-    font-family: 'Lemonada', cursive;
     font-size: 1.5em;
+    color: yellow;
 }
 .navegacao{
     width: 100%;
@@ -35,12 +35,9 @@ button{
     margin: 0;
     top: 0;
     font-size: 1.5em;
-    /*padding-top: 0.5em;
-    padding-bottom: 0.5em;*/
     float: left;
 }
 .navlink{
-    font-family: 'Lemonada', cursive;
     float:right;
     color:white;
     padding: 10px;
@@ -52,5 +49,25 @@ button{
     background-color: white;
 }
 .principal{
-    
+    text-align: center;
+}
+.fachada{
+    display: grid;
+    width: 500px;
+    padding:5px;
+    border: gray solid 1px;
+    bottom:0px;
+    align-content: center;
+}
+.figprincipal{
+    display: grid;
+    background-color: white;
+    color: black;
+    /*top: 0px;*/
+    border: 1px solid gray;
+    border-radius: 0px 0px 15px 15px;
+    width: 500px;
+}
+figure{
+    text-align: center;
 }
