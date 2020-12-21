@@ -9,14 +9,14 @@ i: 0
         <figcaption class="figprincipal">Fachada da loja</figcaption>
     </figure>
     <hr/>
-    <article id="post">
+    <article id="posts">
         <h1>{{ "atualizações" | upcase }}</h1>
         <ul>
             {% for post in site.posts %}
-            <li>
-                <p>postado em {{ post.date | date_to_string }}</p>
+            <li class="post">
                 {{ post.excerpt }}
-                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                <h3><a href="{{ post.url }}" class="postlink">{{ post.title }}</a></h3>
+                <p>postado em {{ post.date | date_to_string }}</p>
             </li>
             {% endfor %}
         </ul>
@@ -25,50 +25,51 @@ i: 0
     <article id="depoimentos">
         <h1>{{ "depoimentos" | upcase }}</h1>
             {% for item in site.data.depoimentos %}
-                <p>
-                    {%for i in (0..5) %}
-                        {% if i != item.estrelas %}
-                            <img src="/assets/images/stars.svg" alt="estrelas" class="">
-                        {% else %}
-                            {% break %}
-                        {% endif %}
-                    {% endfor %} - {{item.data}}</p>
-                <p><cite>{{item.comentario}}</cite><br/>-{{ item.nome }}</p>
+                <div class="depoimento">
+                    <div class="dep_separador"> </div>
+                    <p>
+                        {%for i in (0..5) %}
+                            {% if i != item.estrelas %}
+                                <img src="/assets/images/stars.svg" alt="estrelas" class="">
+                            {% else %}
+                                {% break %}
+                            {% endif %}
+                        {% endfor %} - {{item.data}}
+                    <br/><cite>{{item.comentario}}</cite><br/>-{{ item.nome }}</p>
+                </div>
             {% endfor %}
             <a href="https://search.google.com/local/writereview?placeid=ChIJe7xEndEDz5QR1ZFz3DNafOY">Escreva um comentário</a> <a href="https://search.google.com/local/reviews?placeid=ChIJe7xEndEDz5QR1ZFz3DNafOY">Veja mais</a>
     </article>
-    <article class="">
-        <hr/>
-        <h1>{{ "som, alarme, insulfilm" | upcase }}</h1>
-        <p>Temos diversos modelos de lâmpadas, tanto para uso externo ou interno, de diversos modelos de veículos</p>
+    <hr/>
+    <article class="trabalhamos">
+        <div class="teste">
+            <h1>{{ "som, alarme, insulfilm" | upcase }}</h1>
+            <p>Temos diversos modelos de lâmpadas, tanto para uso externo ou interno, de diversos modelos de veículos</p>
+        </div>
     </article>
-    <article class="">
+    <article class="galeria">
         <hr>
         <h1 class="">{{ "Galeria"| upcase }}</h1>
-        <!-- .galeria-img {
-    width: 140px;
-    height: 140px;
-    object-fit: none;
-} -->
+        <!-- teste -->
         {% for i in (1..11) %}
-            <img src="/assets/images/foto{{ i }}.PNG" alt="" class="galeria-img">
+            <a href="/assets/images/foto{{ i }}.PNG"><img src="/assets/images/foto{{ i }}.PNG" alt="" class="galeria-img"></a>
         {% endfor %}
     </article>
-    <article>
+    <article class="last">
         <hr>
         <h1>{{ "entrar em contato" | upcase }}</h1>
-        <a href="https://www.google.com/maps/place/WestCar/data=!3m1!4b1!4m2!3m1!1s0x94cf03d19d44bc7b:0xe67c5a33dc7391d5"><img src="/assets/images/map.PNG" alt="Mapa" class=""></a>
-        <div class="">
+        <a href="https://www.google.com/maps/place/WestCar/data=!3m1!4b1!4m2!3m1!1s0x94cf03d19d44bc7b:0xe67c5a33dc7391d5"><img src="/assets/images/map.PNG" alt="Mapa" class=""></a><br/>
+        <div id="cont">
             <h1>Contato</h1>
-            <button class="">Ligar agora</button>
-            <p>(11) 96128-3704</p>
+            <button>Ligar agora</button>
+            <p>(11) 96128-3704</p><br/><br/><br/>
         </div>
-        <div class="">
+        <div  id="cont">
             <h1>Endereço</h1>
             <button>Ver rotas</button>
             <p>Avenida Moacir da Silveira, 1774<br>Jardim Isaura<br>Santana de Parnaíba - SP<br>06516-050<br>Brasil</p>
         </div>
-        <div class="">
+        <div id="cont">
             <h1>Horário de funcionamento</h1>
             <p>
                 seg.: 09:00 - 18:00 <br>
@@ -77,7 +78,7 @@ i: 0
                 qui.: 09:00 - 18:00 <br>
                 sex.: 09:00 - 18:00 <br>
                 sáb.: 09:00 - 12:00 <br>
-                dom.: {{ "Fechado" | upcase }}
+                dom.: {{ "Fechado" | upcase }}<br/>
             </p>
         </div>
     </article>

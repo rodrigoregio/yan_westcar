@@ -1,0 +1,21 @@
+.post{
+    list-style-type: none;
+    display: inline-block;
+    border: white 1px dotted;
+}
+.postlink{
+    color: yellow;
+    text-decoration: none;
+}
+.postlink:hover{
+    background-color: white;
+    color: black;
+}
+.post img{
+    width: 300px;
+    padding: 5px;
+    border: white solid 1px;
+}
+.post p{
+    line-height: 0.1;
+}

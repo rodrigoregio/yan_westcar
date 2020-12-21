@@ -5,6 +5,7 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: 'Lemonada', cursive;
+    color: yellow;
 }
 button{
     background-color: #48487F;
@@ -22,14 +23,12 @@ button{
 }
 .logo_caption{
     font-size: 1.5em;
-    color: yellow;
 }
 .navegacao{
     width: 100%;
     display: block;
     position: fixed;
     background-color: #333;
-    color: white;
     text-align: left;
     overflow: auto;
     margin: 0;
@@ -39,17 +38,28 @@ button{
 }
 .navlink{
     float:right;
-    color:white;
-    padding: 10px;
+    /*padding: 10px;*/
     text-decoration: none;
     text-align: center;
+    padding-right: 50px;
+    padding-left: 50px;
+    color: yellow;
 }
 .navlink:hover{
     color: black;
     background-color: white;
 }
+.rodape{
+    width: 100%;
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    background-color: #333;
+    text-align: center;
+}
 .principal{
     text-align: center;
+    align-content: center;
 }
 .fachada{
     display: grid;
@@ -60,14 +70,53 @@ button{
     align-content: center;
 }
 .figprincipal{
-    display: grid;
+    display: inline-block;
+    align-content: center;
     background-color: white;
     color: black;
-    /*top: 0px;*/
-    border: 1px solid gray;
+    border: 5px solid white;
     border-radius: 0px 0px 15px 15px;
     width: 500px;
 }
 figure{
+    display: inline-block;
+    align-content: center;
+}
+.depoimento img{
+    width: 1em;
+}
+.dep_separador{
+    width: 200px;
+    height: 5px;
+    background-color: yellow;
+    display: inline-block;
+}
+.depoimento p{
+    line-height: 1.5;
+}
+.trabalhamos{
+    display: inline-block;
+    position: initial;
+    width: 700px;
+    height: 300px;
+    background-color: gray;
+    color: black;
     text-align: center;
+}
+.trabalhamos .teste{
+    position: relative;
+    top: 45%;
+    transform: translate(0, -45%);
+}
+.galeria-img {
+    width: 140px;
+    height: 140px;
+    object-fit: none;
+}
+.last{
+    padding-bottom: 20px;
+}
+#cont{
+    width: 33%;
+    display: inline-block;
 }
