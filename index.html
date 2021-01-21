@@ -14,6 +14,7 @@ i: 0
         <ul>
             {% for post in site.posts %}
             <li class="post">
+                <img src="/assets/images/{{ post.url }}.jpg" class="post_img">
                 {{ post.excerpt }}
                 <h3><a href="{{ post.url }}" class="postlink">{{ post.title }}</a></h3>
                 <p>postado em {{ post.date | date_to_string }}</p>
@@ -52,24 +53,24 @@ i: 0
         <h1 class="">{{ "Galeria"| upcase }}</h1>
         <!-- teste -->
         {% for i in (1..11) %}
-            <a href="/assets/images/foto{{ i }}.PNG"><img src="/assets/images/foto{{ i }}.PNG" alt="" class="galeria-img"></a>
+            <a href="/assets/images/foto{{ i }}.PNG" target="_blank"><img src="/assets/images/foto{{ i }}.PNG" alt="" class="galeria-img"></a>
         {% endfor %}
     </article>
     <article class="last">
         <hr>
         <h1>{{ "entrar em contato" | upcase }}</h1>
-        <a href="https://www.google.com/maps/place/WestCar/data=!3m1!4b1!4m2!3m1!1s0x94cf03d19d44bc7b:0xe67c5a33dc7391d5"><img src="/assets/images/map.PNG" alt="Mapa" class=""></a><br/>
-        <div id="cont">
+        <a href="https://www.google.com/maps/place/WestCar/data=!3m1!4b1!4m2!3m1!1s0x94cf03d19d44bc7b:0xe67c5a33dc7391d5"><img src="/assets/images/map.PNG" alt="Mapa" class="contato_img"></a><br/>
+        <div id="contato">
             <h1>Contato</h1>
             <button>Ligar agora</button>
-            <p>(11) 96128-3704</p><br/><br/><br/>
+            <p>(11) 96128-3704</p>
         </div>
-        <div  id="cont">
+        <div  id="contato">
             <h1>Endereço</h1>
             <button>Ver rotas</button>
             <p>Avenida Moacir da Silveira, 1774<br>Jardim Isaura<br>Santana de Parnaíba - SP<br>06516-050<br>Brasil</p>
         </div>
-        <div id="cont">
+        <div id="contato">
             <h1>Horário de funcionamento</h1>
             <p>
                 seg.: 09:00 - 18:00 <br>

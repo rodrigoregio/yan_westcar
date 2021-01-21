@@ -1,7 +1,7 @@
 .post{
     list-style-type: none;
     display: inline-block;
-    border: white 1px dotted;
+    /*border: white 1px dotted;*/
 }
 .postlink{
     color: yellow;
@@ -11,11 +11,27 @@
     background-color: white;
     color: black;
 }
-.post img{
+.post_img{
     width: 300px;
     padding: 5px;
     border: white solid 1px;
 }
 .post p{
     line-height: 0.1;
+}
+#post_content{
+    display: block;
+    position: relative;
+    border: 1px solid white;
+    margin-bottom: 50px;
+    align-content: center;
+}
+#post_image{
+    display: inline-block;
+    border: 1px solid white;
+    padding: 5px;
+}
+#post_description{
+    display: inline-block;
+    
 }
